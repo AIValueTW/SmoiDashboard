@@ -85,7 +85,7 @@ export const get_member_ranking_by_total_usd = () => (dispatch) => {
 };
 
 //NFT占比
-export const get_member_nft_value = ({member_id}) => (dispatch) => {
+export const get_member_nft_value = ({ member_id }) => (dispatch) => {
   return dashboardAPI
     .get_member_nft_value(member_id)
     .then((res) => {
@@ -124,7 +124,7 @@ export const get_nft_member_list = () => (dispatch) => {
       const DashboardData = res.data;
       dispatch(
         actions.set_nft_member_list({
-          member_list: DashboardData,
+          nft_member_list: DashboardData,
         })
       );
     })
@@ -133,8 +133,8 @@ export const get_nft_member_list = () => (dispatch) => {
     });
 };
 
-export const get_someone_collections = ({member_id}) => (dispatch) => {
-  
+export const get_someone_collections = ({ member_id }) => (dispatch) => {
+
   return dashboardAPI
     .get_someone_collections(member_id)
     .then((res) => {
@@ -150,14 +150,14 @@ export const get_someone_collections = ({member_id}) => (dispatch) => {
     });
 };
 
-export const get_someone_collection_items = ({member_id,collection}) => (dispatch) => {
+export const get_someone_collection_items = ({ member_id, collection }) => (dispatch) => {
   return dashboardAPI
-    .get_someone_collection_items(member_id,collection)
+    .get_someone_collection_items(member_id, collection)
     .then((res) => {
       const DashboardData = res.data;
       dispatch(
         actions.set_someone_collection_items({
-         someone_collection_items: DashboardData,
+          someone_collection_items: DashboardData,
         })
       );
     })
@@ -199,8 +199,8 @@ export const get_member_ranking_by_holding_crypto = () => (dispatch) => {
     });
 };
 
-export const get_crypto_ranking = ({member_id}) => (dispatch) => {
-  
+export const get_crypto_ranking = ({ member_id }) => (dispatch) => {
+
   return dashboardAPI
     .get_crypto_ranking(member_id)
     .then((res) => {
@@ -216,7 +216,7 @@ export const get_crypto_ranking = ({member_id}) => (dispatch) => {
     });
 };
 
-export const get_someone_crypto_usd = ({member_id}) => (dispatch) => {
+export const get_someone_crypto_usd = ({ member_id }) => (dispatch) => {
   return dashboardAPI
     .get_someone_crypto_usd(member_id)
     .then((res) => {
@@ -232,7 +232,7 @@ export const get_someone_crypto_usd = ({member_id}) => (dispatch) => {
     });
 };
 
-export const get_member_crypto_value = ({member_id}) => (dispatch) => {
+export const get_member_crypto_value = ({ member_id }) => (dispatch) => {
   return dashboardAPI
     .get_member_crypto_value(member_id)
     .then((res) => {

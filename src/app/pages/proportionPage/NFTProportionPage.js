@@ -34,7 +34,7 @@ export function NFTProportionPage() {
       member_nft_value: state.dashboard.member_nft_value,
       member_ranking_by_holding_nfts:
         state.dashboard.member_ranking_by_holding_nfts,
-        nft_member_list: state.dashboard.nft_member_list,
+      nft_member_list: state.dashboard.nft_member_list,
       someone_collections: state.dashboard.someone_collections,
       someone_collection_items: state.dashboard.someone_collection_items,
     }),
@@ -51,6 +51,7 @@ export function NFTProportionPage() {
       actions.get_someone_collection_items({
         member_id: memberId,
         collection: collection,
+
       })
     );
   }, [memberId, collection]);
@@ -82,8 +83,8 @@ export function NFTProportionPage() {
                 !(card_data && member_nft_value)
                   ? ""
                   : member_nft_value.id == "all"
-                  ? card_data[4].value
-                  : member_nft_value.count + "／" + card_data[4].value
+                    ? card_data[4].value
+                    : member_nft_value.count + "／" + card_data[4].value
               }
               cardColor={"#51369f"}
               titleColor={"#ffffff"}
