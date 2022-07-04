@@ -44,7 +44,7 @@ export function CurrencyPage() {
     dispatch(actions.get_member_crypto_value({ member_id: memberId }));
     dispatch(actions.get_crypto_member_list());
     dispatch(actions.get_member_ranking_by_holding_crypto());
-     dispatch(actions.get_crypto_ranking({ member_id: memberId }));
+    dispatch(actions.get_crypto_ranking({ member_id: memberId }));
     dispatch(actions.get_someone_crypto_usd({ member_id: memberId }));
   }, [memberId]);
 
@@ -70,9 +70,9 @@ export function CurrencyPage() {
           <Grid item xs={2.5}>
             <MuiCard
               height={"17vh"}
-              title={ "幣種數量"}
+              title={"幣種數量"}
               value={
-               member_crypto_value?.count||""
+                member_crypto_value?.count || ""
               }
               cardColor={"#3e51cc"}
               titleColor={"#ffffff"}
@@ -84,7 +84,7 @@ export function CurrencyPage() {
               height={"17vh"}
               title={"總價值(ETH)"}
               value={
-                member_crypto_value?toTenThousand(member_crypto_value.ethBalance):""
+                member_crypto_value ? toTenThousand(member_crypto_value.ethBalance) : ""
               }
               cardColor={"#3e51cc"}
               titleColor={"#ffffff"}
@@ -96,7 +96,7 @@ export function CurrencyPage() {
               height={"17vh"}
               title={"總價值(美金)"}
               value={
-                member_crypto_value?.usd||""
+                member_crypto_value?.usd || ""
               }
               cardColor={"#3e51cc"}
               titleColor={"#ffffff"}
@@ -106,7 +106,7 @@ export function CurrencyPage() {
 
           <Grid item xs={3}>
             <Card raised={true} sx={{ height: "70vh" }}>
-              <Card raised={true} sx={{ height: "90vh"}}>
+              <Card raised={true} sx={{ height: "90vh" }}>
                 <BarChartYaxisOutSide
                   data={member_ranking_by_holding_crypto?.count || []}
                   dataName={member_ranking_by_holding_crypto?.nickname || []}
@@ -125,10 +125,10 @@ export function CurrencyPage() {
 
           <Grid item xs={3}>
             <Card raised={true} sx={{ height: "70vh" }}>
-            <CryptoDataGrid
+              <CryptoDataGrid
                 rows={crypto_ranking ? crypto_ranking : {}}
                 title={"熱門持有"}
-                  titleColors={"#8665FF"}
+                titleColors={"#8665FF"}
                 setValue={setCollection}
               />
             </Card>
@@ -136,17 +136,17 @@ export function CurrencyPage() {
 
           <Grid item xs={6}>
             <Card raised={true} sx={{ height: "70vh" }}>
-            {/* <Card raised={true} sx={{ height: "43.5vh", color: "#fed0d0" }}> */}
-                <PieChart
-                  data={someone_crypto_usd?someone_crypto_usd : []}
-                  title={"幣種分布"}
-                  titleColors={"#3C6BEC"}
-                  // colors={["#f73d31", "#fb814e", "#fbd4b5", "#f7918a"]}
-                  colors={{ scheme: 'set3' }}
-                  height={"90%"}
-                  textColor={"#fff"}
-                  setValue={setCounty}
-                />
+              {/* <Card raised={true} sx={{ height: "43.5vh", color: "#fed0d0" }}> */}
+              <PieChart
+                data={someone_crypto_usd ? someone_crypto_usd : []}
+                title={"幣種分布"}
+                titleColors={"#3C6BEC"}
+                // colors={["#f73d31", "#fb814e", "#fbd4b5", "#f7918a"]}
+                colors={{ scheme: 'set3' }}
+                height={"90%"}
+                textColor={"#fff"}
+                setValue={setCounty}
+              />
               {/* </Card> */}
             </Card>
           </Grid>
