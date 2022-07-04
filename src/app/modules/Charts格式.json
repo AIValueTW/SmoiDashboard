@@ -1,0 +1,126 @@
+{
+  "bar/column": {
+    "series": [
+      {
+        "name": "Marine Sprite",
+        "data": [44, 55, 41, 37, 22, 43, 21]
+      },
+      {
+        "name": "Striking Calf",
+        "data": [53, 32, 33, 52, 13, 43, 32]
+      }
+    ],
+    "categories": [
+      "South Korea",
+      "Canada",
+      "United Kingdom",
+      "Netherlands",
+      "Italy",
+      "France",
+      "Japan",
+      "United States",
+      "China",
+      "Germany"
+    ]
+  },
+  "line/area": {
+    "series": [
+      {
+        "name": "series1",
+        "data": [31, 40, 28, 51, 42, 109, 100]
+      },
+      {
+        "name": "series2",
+        "data": [11, 32, 45, 32, 34, 52, 41]
+      }
+    ],
+    "categories": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"]
+  },
+  "treemap": {
+    "series": [
+      {
+        "data": [
+          {
+            "x": "New Delhi",
+            "y": 218
+          },
+          {
+            "x": "Kolkata",
+            "y": 149
+          },
+          {
+            "x": "Mumbai",
+            "y": 184
+          },
+          {
+            "x": "Ahmedabad",
+            "y": 55
+          },
+          {
+            "x": "Bangaluru",
+            "y": 84
+          },
+          {
+            "x": "Pune",
+            "y": 31
+          },
+          {
+            "x": "Surat",
+            "y": 44
+          },
+          {
+            "x": "Hyderabad",
+            "y": 68
+          },
+          {
+            "x": "Lucknow",
+            "y": 28
+          }
+        ]
+      }
+    ]
+  },
+  "pie": {
+    "data": [
+      {
+        "id": "php",
+        "value": 387
+      },
+      {
+        "id": "make",
+        "value": 5
+      },
+      {
+        "id": "css",
+        "value": 295
+      },
+      {
+        "id": "haskell",
+        "value": 216
+      },
+      {
+        "id": "stylus",
+        "value": 224
+      }
+    ]
+  },
+  "datetime": [
+    {
+      "x": "28 Jan 2022",
+      "x2": "7 Feb 2022"
+    },
+    {
+      "x": "22 Jan 2021",
+      "x2": "14 Feb 2021"
+    },
+    {
+      "x": "17 Jan 2020",
+      "x2": "1 Feb 2020"
+    }
+  ],
+  "datagrid": [
+    { "id": 1, "col1": "Hello", "col2": "World", "col3": "ETH" },
+    { "id": 2, "col1": "DataGridPro", "col2": "is Awesome", "col3": "ETH" },
+    { "id": 3, "col1": "MUI", "col2": "is Amazing", "col3": "ETH" }
+  ]
+}
