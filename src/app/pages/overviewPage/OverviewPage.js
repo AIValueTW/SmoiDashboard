@@ -53,7 +53,7 @@ export function OverviewPage() {
             <Stack spacing={2}>
               <Card raised={true} sx={{ height: "43.5vh", color: "#fed0d0" }}>
                 <PieChart
-                  data={city_ratio?city_ratio : []}
+                  data={city_ratio ? city_ratio : []}
                   title={"縣市比"}
                   titleColors={""}
                   colors={["#f73d31", "#fb814e", "#fbd4b5", "#f7918a"]}
@@ -64,10 +64,10 @@ export function OverviewPage() {
               </Card>
               <Card raised={true} sx={{ height: "43.5vh", color: "#f9dd6f" }}>
                 <PieChart
-                  data={gender_ratio?gender_ratio : []}
+                  data={gender_ratio ? gender_ratio : []}
                   title={"男女比"}
                   titleColors={""}
-                  colors={["#f8c7fd","#95cdd1" ]}
+                  colors={["#f8c7fd", "#95cdd1"]}
                   height={"90%"}
                   textColor={"#362c6f"}
                   setValue={setGender}
@@ -80,8 +80,8 @@ export function OverviewPage() {
             <Grid item xs={3}>
               <MuiCard
                 height={"19vh"}
-                title={card_data?card_data[0].title:''}
-                value={card_data?card_data[0].value:''}
+                title={card_data ? card_data[0].title : ''}
+                value={card_data ? card_data[0].value : ''}
                 cardColor={"#f5644d"}
                 titleColor={"#252423"}
                 valueColor={"#252423"}
@@ -90,8 +90,8 @@ export function OverviewPage() {
             <Grid item xs={3}>
               <MuiCard
                 height={"19vh"}
-                title={card_data?card_data[1].title:''}
-                value={card_data?toTenThousand(card_data[1].value):''}
+                title={card_data ? card_data[1].title : ''}
+                value={card_data ? toTenThousand(card_data[1].value) : ''}
                 cardColor={"#f5644d"}
                 titleColor={"#252423"}
                 valueColor={"#252423"}
@@ -100,8 +100,8 @@ export function OverviewPage() {
             <Grid item xs={3}>
               <MuiCard
                 height={"19vh"}
-                title={card_data?card_data[2].title:''}
-                value={card_data?toTenThousand(card_data[2].value):''}
+                title={card_data ? card_data[2].title : ''}
+                value={card_data ? toTenThousand(card_data[2].value) : ''}
                 cardColor={"#f5644d"}
                 titleColor={"#252423"}
                 valueColor={"#252423"}
@@ -110,8 +110,8 @@ export function OverviewPage() {
             <Grid item xs={3}>
               <MuiCard
                 height={"19vh"}
-                title={card_data?card_data[3].title:''}
-                value={card_data?toTenThousand(card_data[3].value):''}
+                title={card_data ? card_data[3].title : ''}
+                value={card_data ? toTenThousand(card_data[3].value) : ''}
                 cardColor={"#f5644d"}
                 titleColor={"#252423"}
                 valueColor={"#252423"}
@@ -120,7 +120,7 @@ export function OverviewPage() {
             <Grid item xs={7.5}>
               <Card raised={true} sx={{ height: "68vh" }}>
                 <NFTRichDataGrid
-                rows={member_ranking_by_total_usd?member_ranking_by_total_usd:{}}
+                  rows={member_ranking_by_total_usd ? member_ranking_by_total_usd : {}}
                   title={"錢包"}
                   titleColors={"#f7b2bc"}
                   setValue={setNickName}
@@ -131,8 +131,8 @@ export function OverviewPage() {
               <Card raised={true} sx={{ height: "68vh" }}>
                 <Card raised={true} sx={{ height: "90vh" }}>
                   <BarChartYaxisOutSide
-                    data={collection_ranking?.count.slice(0,19)  || []}
-                    dataName={collection_ranking?.collectionName.slice(0,19) || []}
+                    data={collection_ranking?.count.slice(0, 19) || []}
+                    dataName={collection_ranking?.collectionName.slice(0, 19) || []}
                     title={"持有Collection排行"}
                     titleColors={"#ff81a2"}
                     colors={["#e7274e", "#fe5f76"]}

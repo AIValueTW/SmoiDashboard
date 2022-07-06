@@ -9,7 +9,7 @@ import { TitleTypography } from "../../../Charts/Mui/TitleTypography";
 import { Box } from "@mui/material";
 
 const other = {
-  autoHeight: true,
+  // autoHeight: true,
   showCellRightBorder: true,
   showColumnRightBorder: true,
 };
@@ -20,22 +20,24 @@ export function NFTRichDataGrid({ rows, title, titleColors, setValue }) {
       <TitleTypography title={title} titleColors={titleColors} />
       <Box
         sx={{
-          height: 300,
           width: 1,
+          height: "100%",
           "& .color-header": {
             backgroundColor: "#de5f5f",
             fontSize: "2vmin",
           },
+          overflow: false
         }}
       >
         <DataGrid
           rows={rows}
           columns={columns}
-          onCellClick={(params, event) => {
-            if (!event.ctrlKey) {
-              setValue(params.row.nickname);
-            }
-          }}
+          getRowHeight={() => 'auto'}
+          // onCellClick={(params, event) => {
+          //   if (!event.ctrlKey) {
+          //     setValue(params.row.nickname);
+          //   }
+          // }}
           {...other}
         />
       </Box>
@@ -49,12 +51,12 @@ const columns = [
     headerClassName: "color-header",
     headerName: "排名",
     headerAlign: "center",
-    type: "number",
+    // type: "number",
     flex: 0.2,
     renderCell: (params) => {
       return (
         <>
-          <Box sx={{ fontSize: "19px" }}>{params.value}</Box>
+          <Box sx={{ height: "50px", fontSize: "19px" }}>{params.value}</Box>
         </>
       );
     },
@@ -68,7 +70,7 @@ const columns = [
     renderCell: (params) => {
       return (
         <>
-          <Box sx={{fontSize: "19px" }}>{params.value}</Box>
+          <Box sx={{ fontSize: "19px" }}>{params.value}</Box>
         </>
       );
     },
